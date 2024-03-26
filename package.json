@@ -1,0 +1,40 @@
+{
+  "name": "chart-service",
+  "version": "1.0.0",
+  "description": "generate charts with sql statement and dynamic function",
+  "main": "src/index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "yarn && cross-env NODE_ENV=development nodemon src/index.js",
+    "start:qat": "yarn && cross-env NODE_ENV=qat pm2 start src/index.js --name chart-service",
+    "format:check": "prettier --check .",
+    "format:write": "prettier --write .",
+    "lint:check": "eslint .",
+    "lint:fix": "eslint --fix ."
+  },
+  "author": "hendricks",
+  "license": "ISC",
+  "dependencies": {
+    "@elastic/ecs-winston-format": "^1.5.2",
+    "axios": "^1.6.7",
+    "cors": "^2.8.5",
+    "cross-env": "^7.0.3",
+    "date-fns": "^3.2.0",
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "express-validator": "^7.0.1",
+    "knex": "^3.1.0",
+    "morgan": "^1.10.0",
+    "pg": "^8.11.3",
+    "prettier-plugin-organize-imports": "^3.2.4",
+    "winston": "^3.11.0",
+    "winston-daily-rotate-file": "^4.7.1"
+  },
+  "devDependencies": {
+    "eslint": "^8.0.1",
+    "eslint-config-prettier": "^9.1.0",
+    "nodemon": "^3.0.3",
+    "prettier": "^3.2.4"
+  }
+}
